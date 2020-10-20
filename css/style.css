@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fuente);
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  --fuente: 'Roboto', sans-serif;
+}
+
+.hide{display: none;}
+
+.wrapper{
+  width: 80%;
+  max-width: 31rem;
+  margin: auto;
+}
+
+body{
+  padding-top: 5em;
+  min-height: 100vh;
+  background: #757f9a; /* Old browsers */
+  background: -moz-linear-gradient(top,  #757f9a 0%, #7a7a7a 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #757f9a 0%,#7a7a7a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #757f9a 0%,#7a7a7a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#757f9a', endColorstr='#7a7a7a',GradientType=0 ); /* IE6-9 */
+}
+
+header{
+  margin: auto;
+  text-align: center;
+
+}
+
+header h1 {
+  padding: 0.25em 0;
+  border: 1px solid;
+  
+  border: 1px solid black;
+  color: #2F4858;
+  font-size: 3rem;
+  background-color: white;
+}
+
+
+form {
+  width: 100%;
+}
+
+form input, form select{
+  width: 80%;
+}
+
+
+
+.inputs {
+  display: flex;
+  padding: 1em 0;
+  border: 1px solid;
+  margin-bottom: 4em;
+  background-color: #D4D4D4;
+}
+
+.inputs ul{
+list-style-type: none;
+justify-content: space-evenly;
+display: flex;
+width: 100%;
+}
+
+.inputs ul li div{
+  border: 0.15em solid;
+  border-radius: 50%;
+  padding: 0.3em;
+  background-color: white;
+  cursor: pointer;
+}
+
+.inputs ul li div:hover{
+  background-color: #92aeb3;
+}
+
+main article{
+  border: 1px solid;
+  padding: 1em;
+  font-size: 1.4rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.urgent{
+  border-left: 1.5em solid #FF0000;
+}
+
+.mensual {
+  border-left: 1.5em solid #00E5FF;
+}
+.diario {
+  border-left: 1.5em solid #00FF00;
+}
+
+.trash {
+    border-radius: 50%;
+    border: 0.125em solid black;
+    padding: 5px;
+  
+  }

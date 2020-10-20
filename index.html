@@ -12,21 +12,17 @@
 
   <div class="wrapper">
     <header>
-      <div>
-        <h1>LISTA DE TAREAS</h1>
-      </div>
-      <div>
-        <div>
-          <form action="#">
-            <input type="text" name="tareNueva" id="tareaNueva" placeholder="Introduce una tarea">
-            <select name="prioridadNueva" id="prioridadNueva" placeholder="test">
-              <option value="" selected>elige una prioridad</option>
-              <option value="urgente">URGENTE</option>
-              <option value="diaria">Diaria</option>
-              <option value="mensual">Mensual</option>
-            </select>
-          </form>
-        </div>
+      <h1>LISTA DE TAREAS</h1>
+      <div class="inputs">
+        <form class="hide" action="#">
+          <input type="text" name="tareNueva" id="tareaNueva" placeholder="Introduce una tarea">
+          <select name="prioridadNueva" id="prioridadNueva" placeholder="test">
+            <option value="" selected>elige una prioridad</option>
+            <option value="urgente">URGENTE</option>
+            <option value="diaria">Diaria</option>
+            <option value="mensual">Mensual</option>
+          </select>
+        </form>
         <ul>
           <li>
             <div><img src="./files/plus-good.svg" alt=""></div>
@@ -41,10 +37,18 @@
       </div>
     </header>
     <main>
-      <!--  <article>
+      <article class="urgent">
         <h2>Pasear el perro</h2>
-        <div><img src="./files/trash.svg" alt=""></div>
-      </article> -->
+        <div class="trash hide"><img src="./files/trash.svg" alt=""></div>
+      </article>
+      <article class="mensual">
+        <h2>Pasear el perro</h2>
+        <div class="trash hide"><img src="./files/trash.svg" alt=""></div>
+      </article>
+      <article class="diario">
+        <h2>Pasear el perro</h2>
+        <div class="trash hide"><img src="./files/trash.svg" alt=""></div>
+      </article>
     </main>
   </div>
 
