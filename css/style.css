@@ -33,6 +33,7 @@ body{
   background: -webkit-linear-gradient(top,  #757f9a 0%,#7a7a7a 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #757f9a 0%,#7a7a7a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#757f9a', endColorstr='#7a7a7a',GradientType=0 ); /* IE6-9 */
+  overflow-x: hidden;
 }
 
 header{
@@ -106,6 +107,7 @@ main article{
   background-color: white;
   display: flex;
   justify-content: space-between;
+  transition: transform ease-in-out 200ms;
 }
 
 main article h2{
@@ -116,8 +118,11 @@ main article h2{
   border-left: 1.5em solid #FF0000;
 }
 
+/* transform: translateY(-87px);
+*/
 .mensual {
   border-left: 1.5em solid #00E5FF;
+ 
 }
 .diaria {
   border-left: 1.5em solid #00FF00;

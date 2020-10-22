@@ -17,21 +17,34 @@ function addNewTask(pForm) {
 }
 
 
-function searchTask() {
-  console.log('task searched');
+function searchTaskByName(event) {
+  if (addBtn.parentElement.parentElement.classList.contains('hide')) {
+    printTaskList(filtrar(event.target.value.toLowerCase(), 'tarea'));
+  }
 }
 
-function deleteElement(event) {
-  const articleAEliminar = event.target.parentNode.parentNode;
+function searchTaskByPriority() {
+  printTaskList(filtrar(inputPrioridad.value, 'prioridad'));
+}
+
+function filtrar(pNombreFiltrar, pTipoFiltrado) {
+  const result = tareas.filter(tareaIndividual => {
+    return tareaIndividual[pTipoFiltrado].includes(pNombreFiltrar)
+  })
+  return result
+}
+
+function deleteElement() {
+  const articleAEliminar = this.parentNode;
   const tareaEliminar = articleAEliminar.innerText.toLowerCase();
-  console.log(tareaEliminar);
   const indexTarea = tareas.findIndex(tareaIndividual => {
     return tareaIndividual.tarea == tareaEliminar
   })
 
-  console.log(indexTarea);
-  tareas.splice(indexTarea, 1)
-
-  printTaskList(tareas)
-  artDelBtn.forEach((article => article.classList.remove('hide')));
+  animateTareasEliminada(indexTarea);
+  setTimeout(() => {
+    tareas.splice(indexTarea, 1)
+    printTaskList(tareas)
+    artDelBtn.forEach((article => article.classList.remove('hide')));
+  }, 400);
 }

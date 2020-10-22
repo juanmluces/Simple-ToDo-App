@@ -1,10 +1,15 @@
 
 const tareas = new Array(
   {
-    tarea: 'tarea1',
-    prioridad: 'URGENTE'
+    tarea: 'estudiar javascript',
+    prioridad: 'urgente'
   },
   {
-    tarea: 'tarea2',
-    prioridad: 'Diaria'
-  });
+    tarea: 'meditar',
+    prioridad: 'diaria'
+  },
+  {
+    tarea: 'cortarme el cabello',
+    prioridad: 'mensual'
+  }
+)
