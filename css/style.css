@@ -78,14 +78,14 @@ display: flex;
 width: 100%;
 }
 
-.inputs ul li div{
+.inputs ul li button{
   border: 0.15em solid;
   border-radius: 50%;
   padding: 0.3em;
   background-color: white;
 }
 
-.inputs ul li div:hover, .trash:hover{
+.inputs ul li button:hover, .trash:hover, .inputs ul li button:focus{
   cursor: pointer;
   background-color: #92aeb3;
 }
@@ -108,6 +108,11 @@ main article{
   display: flex;
   justify-content: space-between;
   transition: transform ease-in-out 200ms;
+}
+
+main #temporalArticle{
+  position: relative;
+  left: -100vw;
 }
 
 main article h2{

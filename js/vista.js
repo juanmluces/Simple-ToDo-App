@@ -18,6 +18,7 @@ deleteBtn.addEventListener('click', showForm);
 inputTareas.addEventListener('input', searchTaskByName);
 
 
+
 printTaskList(tareas)
 
 function showForm(event) {
@@ -78,6 +79,20 @@ function printTaskList(pList) {
   artDelBtn.forEach((article => article.addEventListener('click', deleteElement)));
 }
 
+function animateNewTask(pTask) {
+  let articleToAnimate = `<article id="temporalArticle" class="${pTask.prioridad.toLowerCase()}">
+  <h2 id="${pTask.tarea}">${pTask.tarea}</h2>
+  <div class="trash hide"><img src="./files/trash.svg" alt=""></div>
+</article>`
+
+  main.innerHTML += articleToAnimate;
+  articleToAnimate = document.getElementById('temporalArticle');
+  setTimeout(() => {
+    articleToAnimate.style.transform = 'translateX(100vw)';
+  }, 1);
+
+  console.log(pTask);
+}
 
 function alertMessage(pMessage) {
 

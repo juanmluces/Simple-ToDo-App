@@ -12,8 +12,13 @@ function addNewTask(pForm) {
   } else {
     divAlertMessage.classList.add('hide');
     tareas.push(newTask);
-    printTaskList(tareas);
+    animateNewTask(newTask)
+    setTimeout(() => {
+      printTaskList(tareas);
+    }, 400);
   }
+  inputTareas.value = '';
+  inputPrioridad.value = '';
 }
 
 

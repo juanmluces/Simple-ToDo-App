@@ -15,7 +15,7 @@
     <header>
       <h1>LISTA DE TAREAS</h1>
       <div class="inputs">
-        <form class="hide" action="#">
+        <form class="hide" onSubmit="return false">
           <input type="text" name="tareNueva" id="tareaNueva" placeholder="Introduce una tarea">
           <select name="prioridadNueva" id="prioridadNueva" placeholder="test">
             <option value="" selected>elige una prioridad</option>
@@ -26,16 +26,16 @@
         </form>
         <ul>
           <li>
-            <div><img id="addNew" src="./files/plus-good.svg"></div>
+            <button><img id="addNew" src="./files/plus-good.svg"></button>
           </li>
           <li>
-            <div><img id="find" src="./files/buscar.svg"></div>
+            <button><img id="find" src="./files/buscar.svg"></button>
           </li>
           <li class="hide">
-            <div><img id="cancel" src="./files/x.svg"></div>
+            <button><img id="cancel" src="./files/x.svg"></button>
           </li>
           <li>
-            <div><img id="delete" src="./files/trash.svg"></div>
+            <button><img id="delete" src="./files/trash.svg"></button>
           </li>
         </ul>
       </div>
