@@ -71,7 +71,7 @@ function printTaskList(pList) {
     listaAPintar += `
     <article class="${article.prioridad.toLowerCase()}">
       <h2 id="${article.tarea}">${article.tarea}</h2>
-      <div class="trash hide"><img src="./files/trash.svg" alt=""></div>
+      <div class="trash hide"><img src="./images/trash.svg" alt=""></div>
     </article>`
   })
   main.innerHTML = listaAPintar;
@@ -82,7 +82,7 @@ function printTaskList(pList) {
 function animateNewTask(pTask) {
   let articleToAnimate = `<article id="temporalArticle" class="${pTask.prioridad.toLowerCase()}">
   <h2 id="${pTask.tarea}">${pTask.tarea}</h2>
-  <div class="trash hide"><img src="./files/trash.svg" alt=""></div>
+  <div class="trash hide"><img src="./images/trash.svg" alt=""></div>
 </article>`
 
   main.innerHTML += articleToAnimate;
