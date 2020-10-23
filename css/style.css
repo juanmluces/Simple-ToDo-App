@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+
+:root {
+  --fuente: 'Roboto', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -13,9 +22,6 @@ img{
   display: block;
 }
 
-:root {
-  --fuente: 'Roboto', sans-serif;
-}
 
 .hide{display: none;}
 
@@ -107,6 +113,7 @@ main article{
   background-color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   transition: transform ease-in-out 200ms;
 }
 
@@ -117,6 +124,7 @@ main #temporalArticle{
 
 main article h2{
   text-transform: capitalize;
+  width: 80%;
 }
 
 .urgente{

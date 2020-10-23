@@ -1,5 +1,4 @@
 
-
 function addNewTask(pForm) {
   const newTask = {
     tarea: pForm[0].value.toLowerCase(),
@@ -10,20 +9,18 @@ function addNewTask(pForm) {
   } else if (tareas.find(tareaIndividual => tareaIndividual.tarea == newTask.tarea)) {
     alertMessage('La Tarea Ya Está En La Lista')
   } else {
-    divAlertMessage.classList.add('hide');
-    tareas.push(newTask);
-    animateNewTask(newTask)
-    setTimeout(() => {
-      printTaskList(tareas);
-    }, 400);
+    animateAndPrintTask(newTask);
   }
-  inputTareas.value = '';
-  inputPrioridad.value = '';
+  resetForm();
 }
 
 
 function searchTaskByName(event) {
-  if (addBtn.parentElement.parentElement.classList.contains('hide')) {
+
+  const isAddBtnHidden = addBtn.parentElement.parentElement.classList.contains('hide');
+
+  //comprobamos si estamos en la seccion de buscar revisando si el boton (+) está oculto
+  if (isAddBtnHidden) {
     printTaskList(filtrar(event.target.value.toLowerCase(), 'tarea'));
   }
 }
@@ -45,11 +42,6 @@ function deleteElement() {
   const indexTarea = tareas.findIndex(tareaIndividual => {
     return tareaIndividual.tarea == tareaEliminar
   })
+  animateTareasAEliminar(indexTarea);
 
-  animateTareasEliminada(indexTarea);
-  setTimeout(() => {
-    tareas.splice(indexTarea, 1)
-    printTaskList(tareas)
-    artDelBtn.forEach((article => article.classList.remove('hide')));
-  }, 400);
 }
